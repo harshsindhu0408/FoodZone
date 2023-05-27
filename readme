@@ -1,0 +1,51 @@
+# Food Ordering App
+
+Welcome to our Food Ordering App! This app allows users to conveniently order food from various restaurants and have it delivered to their doorstep. This readme file provides an overview of the app's features, installation instructions, and usage guidelines.
+
+## Features
+
+- **User Registration**: Users can create an account or log in using their existing credentials.
+- **Restaurant Selection**: Users can browse through a list of restaurants available on the platform.
+- **Menu Exploration**: Users can view the menu items offered by each restaurant, including descriptions and prices.
+- **Order Placement**: Users can add items to their cart and place orders for delivery.
+- **Order Tracking**: Users can track the status of their orders in real-time, from preparation to delivery. (Coming Soon)
+- **Payment Integration**: Secure payment options are available for users to complete their transactions. (Coming Soon)
+- **Order History**: Users can view their past orders and reorder their favorite meals easily.(Coming Soon)
+- **Notifications**: Users receive notifications about order updates, special offers, and promotions. (Coming Soon)
+
+## Installation
+
+1. Clone the repository from [GitHub](https://github.com/harshsindhu0408/FoodZone).
+2. Install the necessary dependencies using the package manager of your choice (`npm`, `yarn`, etc.).
+3. Set up the required environment variables for the app, such as API keys, database connection details, etc.
+4. Build the project by running the appropriate command (`npm run build`, `yarn build`, etc.).
+5. Start the app using the command `npm start` or `yarn start`.
+
+## Contributing
+
+We welcome contributions from the community to enhance our Food Ordering App. If you would like to contribute, please follow these steps:
+
+1. Fork the repository and create a new branch for your feature or bug fix.
+2. Make the necessary code changes and ensure that the app is functioning correctly.
+3. Write tests for your changes to maintain code quality.
+4. Commit your changes and submit a pull request with a detailed description of your contribution.
+
+## Usage
+
+1. Launch the app on your device or visit the web version.
+2. Sign up for a new account or log in using your existing credentials.
+3. Browse the list of available restaurants and select your desired one.
+4. Explore the menu items, add them to your cart, and customize as needed.
+5. Proceed to the checkout page, enter your delivery address, and choose a payment method.
+6. Confirm your order and wait for it to be prepared and delivered.
+7. Track the status of your order through real-time updates.
+8. After receiving your order, you can rate and review the restaurant or reorder from your order history.
+9. Enjoy your delicious meal!
+
+## Support
+
+If you encounter any issues or have any questions regarding the Food Ordering App, please contact our support team at harshsindhupvt@gmail.com.
+
+## License
+
+This Food Ordering App is licensed under the [MIT License](LICENSE.md).
