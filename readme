@@ -1,5 +1,7 @@
 # Food Ordering App
 
+# Imp!!!! ---- CORS extension required to be enabled to use this project as I am using Swiggy API url for fetching all the data.
+
 Welcome to our Food Ordering App! This app allows users to conveniently order food from various restaurants and have it delivered to their doorstep. This readme file provides an overview of the app's features, installation instructions, and usage guidelines.
 
 ## Features
