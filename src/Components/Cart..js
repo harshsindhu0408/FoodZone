@@ -1,7 +1,5 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import FoodItem from "./FoodItem"
-import {clearCart} from "../Utils/cartSlice"
-import { useState } from "react";
 import CartBill from "./CartBill";
 
 const Cart = () => {
@@ -9,6 +7,8 @@ const Cart = () => {
     // const [total, setTotal] = useState(0);
     // setTotal(total + FoodItem.price);
     // console.log(total);
+
+    
 
     const cartItems = useSelector((store) => store.cart.items);
     let total = 0;

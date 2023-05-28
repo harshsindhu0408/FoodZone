@@ -95,7 +95,7 @@ const Body = () => {
             <div className="headingg">Eat what makes you happy....</div>
 
               <div className="select-fast">
-                <div className="select-fast-img" onClick={() => {
+                <div className="select-fast-img ddnn" onClick={() => {
                   onClickhandler("Pizzas");
                 }}>
                   <img src="https://b.zmtcdn.com/data/o2_assets/56242a05c64150a79994df6902cde1dd1633434835.png" alt="" loading="lazy" width={170} />
@@ -123,7 +123,7 @@ const Body = () => {
                   <h3>Desserts</h3>
                 </div>
 
-                <div className="select-fast-img" onClick={() => {
+                <div className="select-fast-img ddnn" onClick={() => {
                     onClickhandler("Snacks");
                 }}>
                   <img src="https://b.zmtcdn.com/data/dish_images/f6a3d294b0f120f68aac6de2acf2e1721637241776.png" alt="" loading="lazy" width={170} />

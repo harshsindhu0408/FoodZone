@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import FoodFireLogo from "../Images/Food Fire Logo.png";
 import { Link } from "react-router-dom"; // imported Link for client side routing
 import { useNavigate } from "react-router-dom";
 import UserContext from "../Utils/UserContext";
@@ -11,7 +10,7 @@ const Title = () => (
   <a href="/">
     <img
       className="logo"
-      src={FoodFireLogo}
+      src="https://static1.squarespace.com/static/5fe38b8545edd7133eba2662/t/5fe39624131ea732477acf24/1608750633768/TheFoodZoneLogo-1000px-01.jpg?format=1500w"
       alt="Food Zone Logo"
       title="Food Zone Logo"
     />

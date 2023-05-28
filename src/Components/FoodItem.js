@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { IMG_CDN_URL } from "../constants";
 
 // FoodItem card component: Image, name, area

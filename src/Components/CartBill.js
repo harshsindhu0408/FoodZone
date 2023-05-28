@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Outlet } from "react-router-dom";
 import {clearCart} from "../Utils/cartSlice"
 
 const CartBill = (props) => {
@@ -19,6 +18,54 @@ const CartBill = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setMessage(true);
+    }
+
+    {/* Razorpay Payment Itegration script load */}
+    const loadscript = (src) => {
+        return new Promise((resolve) => {
+            const script = document.createElement('script');
+            script.src = src;
+
+            script.onload = () => {
+                resolve(true);
+            }
+
+            script.onerror = () => {
+                resolve(false);
+            }
+
+            document.body.appendChild(script);
+        })
+    }
+
+    {/* Razorpay Payment Itegration Main Function */}
+    const displayRazorpay = async (amount) => {
+        const res = await loadscript('https://checkout.razorpay.com/v1/checkout.js');
+        if(!res){
+            alert('You are offline failed to load the Razorpay SDK');
+            return;
+        }
+
+        const options = {
+            key: "rzp_test_B8XBOF5jojC8Rn",
+            key_secret:"C8QUbk9Mtqk742x4rZKdSAVE",
+            currency: "INR",
+            amount: amount,
+            description:"for testing purpose",
+
+            handler: function(response){
+                alert(response.razorpay_payment_id);
+                alert("Payment Successfull")
+            },
+            prefill: {
+                name:"Harsh",
+                email:"harshsindhu0404@gmail.com",
+                contact:"9817554363"
+            },
+        };
+
+        const paymentObject = new window.Razorpay(options);
+        paymentObject.open();
     }
 
   return (
@@ -66,14 +113,9 @@ const CartBill = (props) => {
                 </div>
 
                 <div className="btn-divv">
-                    <Link to={"/checkout"}>
-                        <button
-                        className="checkout-btn"
-                        >
+                    <button onClick={() => displayRazorpay(total)} className="checkout-btn">
                             Checkout
-                        </button>
-                    </Link>
-                    <Outlet />
+                    </button>
 
                     <button className="clear-cart-btn" onClick = {() => handleClearCart()}>Clear Cart</button>
                 </div>
