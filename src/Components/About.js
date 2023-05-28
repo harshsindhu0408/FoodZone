@@ -1,13 +1,12 @@
-import { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
 import food from "../Images/burger-image.png";
 
+
 const About = () => {
-  const [show, setShow] = useState(false);
   return (
     <div>
       
       <div className="about-container">
+
         <div className="about-left">
           <h1>
             Welcome to <br /> The world of <br />{" "}
@@ -18,9 +17,13 @@ const About = () => {
             meal"
           </h4>
         </div>
+
         <div className="about-right">
-          <img src={food} alt="Food Image" />
+          <img src={food} alt="Food Img" />
         </div>
+
+ 
+
       </div>
     </div>
   );

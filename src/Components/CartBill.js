@@ -6,21 +6,19 @@ const CartBill = (props) => {
 
     const total = props.total;
     const cartItems = useSelector((store) => store.cart.items);
-    console.log(cartItems);
     const dispatch = useDispatch();
-    console.log(total/100);
 
     const handleClearCart = () => {
         dispatch(clearCart());
     }
 
-    const [message, setMessage] = useState(false);
+    const [setMessage] = useState(false);
     const handleSubmit = (e) => {
         e.preventDefault();
         setMessage(true);
     }
 
-    {/* Razorpay Payment Itegration script load */}
+    /* Razorpay Payment Itegration script load */
     const loadscript = (src) => {
         return new Promise((resolve) => {
             const script = document.createElement('script');
@@ -38,7 +36,7 @@ const CartBill = (props) => {
         })
     }
 
-    {/* Razorpay Payment Itegration Main Function */}
+    /* Razorpay Payment Itegration Main Function */
     const displayRazorpay = async (amount) => {
         const res = await loadscript('https://checkout.razorpay.com/v1/checkout.js');
         if(!res){
