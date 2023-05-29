@@ -103,7 +103,7 @@ const Body = () => {
                 </div>
 
                 <div className="select-fast-img" onClick={() => {
-                    onClickhandler("Burger");
+                    onClickhandler("Burgers");
                 }}>
                   <img src="https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png" alt="" loading="lazy" width={170} />
                   <h3>Burger</h3>

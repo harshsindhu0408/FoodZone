@@ -45,8 +45,8 @@ const CartBill = (props) => {
         }
 
         const options = {
-            key: "rzp_test_B8XBOF5jojC8Rn",
-            key_secret:"C8QUbk9Mtqk742x4rZKdSAVE",
+            key: "Enter your razorpay key",
+            key_secret:"Enter your razorpay secret",
             currency: "INR",
             amount: amount,
             description:"for testing purpose",
