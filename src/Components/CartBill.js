@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import {clearCart} from "../Utils/cartSlice"
+import { Link } from 'react-router-dom';
 
 const CartBill = (props) => {
 
@@ -11,6 +12,8 @@ const CartBill = (props) => {
     const handleClearCart = () => {
         dispatch(clearCart());
     }
+
+    const [track, setTrack] = useState(false);
 
     const [setMessage] = useState(false);
     const handleSubmit = (e) => {
@@ -45,15 +48,16 @@ const CartBill = (props) => {
         }
 
         const options = {
-            key: "Enter your razorpay key",
-            key_secret:"Enter your razorpay secret",
+            key: "rzp_test_B8XBOF5jojC8Rn",
+            key_secret:"C8QUbk9Mtqk742x4rZKdSAVE",
             currency: "INR",
             amount: amount,
             description:"for testing purpose",
 
             handler: function(response){
-                alert(response.razorpay_payment_id);
+                handleClearCart();
                 alert("Payment Successfull")
+                setTrack(true);
             },
             prefill: {
                 name:"Harsh",
@@ -117,10 +121,17 @@ const CartBill = (props) => {
 
                     <button className="clear-cart-btn" onClick = {() => handleClearCart()}>Clear Cart</button>
                 </div>
+
+                {
+                    track ? (<Link to={'/track'} >
+                        <button className='checkout-btn'> Track Order </button>
+                        </Link>) : 
+                    (<div></div>)
+                }
           
                     
 
-            </div>
+        </div>
 
     </div>
   )

@@ -30,7 +30,7 @@ const Header = () => {
 
   const navigate = useNavigate();
   return (
-    <div className="header">
+    <nav className="header">
       <Title />
       <div className="nav-items">
         <ul>
@@ -47,6 +47,10 @@ const Header = () => {
 
           <li>
             <Link to="/profile">Profile</Link>
+          </li>
+
+          <li>
+            <Link to="/track">Track Order</Link>
           </li>
 
           <li>
@@ -72,7 +76,7 @@ const Header = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 

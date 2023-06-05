@@ -18,8 +18,8 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"; 
 import 'font-awesome/css/font-awesome.min.css';
 import { Provider } from "react-redux";
 import store from "./Utils/store";
-import Checkout from "./Components/Checkout";
 import './index.css';
+import OrderComplete from "./Components/OrderComplete";
 
 
 //Chunking
@@ -89,12 +89,16 @@ const appRouter = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path:"checkout",
-        element: <Checkout />,
+        path:"track",
+        element: <OrderComplete />,
       },
       {
         path: "restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/track",
+        element: <OrderComplete />,
       },
       {
         path: "profile",
